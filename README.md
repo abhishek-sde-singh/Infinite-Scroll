@@ -33,3 +33,29 @@ I have implemented a simpler way you can try this one and also try to implement 
 - React
 - JavaScript
 - HTML/CSS
+
+## Comparison
+
+### JavaScript Expression (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight):
+
+#### Pros:
+
+`Simplicity`: It's straightforward and easy to implement.
+`Compatibility`: It works in all browsers, including older ones.
+
+#### Cons:
+
+`Performance`: It requires continuous checking (usually on a scroll event), which can lead to performance issues, especially on mobile devices.
+`Less Precision`: It may not be as precise in all scenarios, especially with dynamic content.
+
+### Intersection Observer API:
+
+#### Pros:
+
+`Performance`: More efficient as it's natively supported by browsers and does not require continuous event listening or element measurements.
+`Flexibility and Precision`: More versatile for detecting when an element enters or leaves the viewport, providing better control over the loading of content.
+
+#### Cons:
+
+`Browser Support`: Not supported in older browsers (e.g., Internet Explorer) without a polyfill.
+`Slightly More Complex`: The API is more complex than the basic JavaScript approach.
